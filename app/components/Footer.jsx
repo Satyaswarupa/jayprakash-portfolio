@@ -70,7 +70,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-[#94a3b8]">
               <li>+91 8197225902</li>
               <li>mrmohanty2331@gmail.com</li>
-              <li>Bangaluru, India</li>
+              <li>Banglore, India</li>
             </ul>
           </div>
         </div>

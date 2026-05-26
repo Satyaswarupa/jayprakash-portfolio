@@ -20,21 +20,13 @@ const About = () => {
     threshold: 0.2,
   })
 
-  // ←←← Change this URL to your actual photo
-  const profileImage = "https://media.licdn.com/dms/image/v2/D5603AQHTaD8ra7S2cw/profile-displayphoto-crop_800_800/B56Z5A3aEuJgAI-/0/1779204728186?e=1781136000&v=beta&t=ZMoD0_l7xrOrQOu3CGnw_42SsMpI6mOpLF7k8_6GTZI"  
-  // Example: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" 
+  const profileImage = "https://media.licdn.com/dms/image/v2/D5603AQHTaD8ra7S2cw/profile-displayphoto-crop_800_800/B56Z5A3aEuJgAI-/0/1779204728186?e=1781136000&v=beta&t=ZMoD0_l7xrOrQOu3CGnw_42SsMpI6mOpLF7k8_6GTZI"
 
   const stats = [
     { icon: Calendar, value: '4+', label: 'Years Experience' },
     { icon: Award, value: '20+', label: 'Enterprise Projects' },
     { icon: Coffee, value: '1500+', label: 'Coffee Sessions' },
     { icon: User, value: '99.9%', label: 'Production Stability' },
-  ]
-
-  const skills = [
-    'Java', 'PostgreSQL', 'MongoDB', 'AWS', 'Linux', 'Control-M',
-    'Postman API', 'ETL', 'SQL', 'ITIL', 'Production Support',
-    'Incident Management',
   ]
 
   const containerVariants = {
@@ -61,20 +53,16 @@ const About = () => {
               About Me
             </span>
             <h2 className="section-title">
-              Enterprise Software Engineer with{' '}
-              <span className="gradient-text">Production Expertise</span>
+              Bridging Development &amp; Operations
             </h2>
-            <p className="section-subtitle mx-auto">
-              Experienced in building, supporting, and maintaining
-              enterprise-grade applications across BFSI and Fintech
-              domains with strong expertise in Java, databases,
-              cloud platforms, and production operations.
+            <p className="section-subtitle mx-auto text-lg">
+              Transitioning to DevOps with strong production expertise
             </p>
           </motion.div>
 
           {/* Content Grid */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            {/* Image Side - Updated with Real Photo */}
+            {/* Image Side */}
             <motion.div variants={itemVariants} className="relative">
               <div className="relative z-10 rounded-3xl overflow-hidden border border-white/10">
                 <div className="aspect-square bg-gradient-to-br from-[#6366f1]/10 to-[#ec4899]/10">
@@ -86,72 +74,72 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Decorative Elements */}
               <div className="absolute -top-4 -left-4 w-24 h-24 border-2 border-[#6366f1]/30 rounded-2xl" />
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#ec4899]/10 rounded-2xl" />
             </motion.div>
 
-            {/* Text Side */}
+            {/* Text Side - Updated with your new content */}
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl md:text-3xl font-bold font-['Space_Grotesk'] leading-snug">
-                Delivering reliable enterprise solutions with{' '}
-                <span className="gradient-text">performance & precision</span>
+                Bridging Development &amp; Operations —{' '}
+                <span className="gradient-text">Transitioning to DevOps</span>
               </h3>
 
-              <p className="text-[#94a3b8] leading-relaxed">
-                I am a Senior Software Engineer with 4+ years of
-                experience in Java Application Development and
-                Production Support within BFSI and Fintech domains.
-                My expertise includes enterprise application support,
-                SQL optimization, monitoring systems, deployment
-                management, and troubleshooting critical production
-                issues.
-              </p>
+              <div className="space-y-5 text-[#94a3b8] leading-relaxed">
+                <p>
+                  With 4+ years of hands-on experience in enterprise Java application 
+                  development and production support across BFSI and Fintech domains, 
+                  I am now channeling my deep operational expertise into a focused 
+                  DevOps career transition.
+                </p>
 
-              <p className="text-[#94a3b8] leading-relaxed">
-                I have hands-on experience with Java, PostgreSQL,
-                MongoDB, Linux, AWS, ETL processes, Control-M,
-                Incident Management, and ITIL practices.
-              </p>
+                <p>
+                  My background in deployment management, incident management, SQL optimization, 
+                  monitoring systems, and troubleshooting critical production issues gives me 
+                  a natural foundation for DevOps — I've been living at the intersection of 
+                  Dev and Ops for years.
+                </p>
+
+                <p>
+                  Currently expanding my skills in CI/CD pipelines, Infrastructure as Code 
+                  (Terraform, Ansible), containerization (Docker, Kubernetes), and cloud-native 
+                  architectures on AWS. I bring with me strong experience in Linux, ETL processes, 
+                  Control-M scheduling, and ITIL practices — skills that translate directly into 
+                  building reliable, automated delivery pipelines.
+                </p>
+
+                <p>
+                  I thrive in high-stakes environments where uptime, performance, and precision 
+                  matter — and I'm now building the toolset to automate, scale, and secure those 
+                  environments end to end.
+                </p>
+              </div>
 
               {/* Feature Cards */}
-              <div className="grid sm:grid-cols-2 gap-4 pt-2">
-                <div className="glass rounded-2xl p-4 border border-white/10">
-                  <Database className="w-8 h-8 text-[#6366f1] mb-3" />
-                  <h4 className="text-white font-semibold mb-1">Database Expertise</h4>
-                  <p className="text-sm text-[#94a3b8]">PostgreSQL, MongoDB, SQL Optimization</p>
-                </div>
-
+              <div className="grid sm:grid-cols-2 gap-4 pt-4">
                 <div className="glass rounded-2xl p-4 border border-white/10">
                   <Server className="w-8 h-8 text-[#6366f1] mb-3" />
-                  <h4 className="text-white font-semibold mb-1">Production Support</h4>
-                  <p className="text-sm text-[#94a3b8]">Incident Management & RCA</p>
+                  <h4 className="text-white font-semibold mb-1">Production Expertise</h4>
+                  <p className="text-sm text-[#94a3b8]">Incident Management &amp; Troubleshooting</p>
                 </div>
 
                 <div className="glass rounded-2xl p-4 border border-white/10">
                   <Cloud className="w-8 h-8 text-[#6366f1] mb-3" />
-                  <h4 className="text-white font-semibold mb-1">Cloud & Linux</h4>
-                  <p className="text-sm text-[#94a3b8]">AWS & Linux Environment Support</p>
+                  <h4 className="text-white font-semibold mb-1">DevOps Journey</h4>
+                  <p className="text-sm text-[#94a3b8]">Docker • Kubernetes • Terraform • CI/CD</p>
+                </div>
+
+                <div className="glass rounded-2xl p-4 border border-white/10">
+                  <Database className="w-8 h-8 text-[#6366f1] mb-3" />
+                  <h4 className="text-white font-semibold mb-1">Backend &amp; Data</h4>
+                  <p className="text-sm text-[#94a3b8]">Java • Spring Boot • SQL Optimization</p>
                 </div>
 
                 <div className="glass rounded-2xl p-4 border border-white/10">
                   <ShieldCheck className="w-8 h-8 text-[#6366f1] mb-3" />
-                  <h4 className="text-white font-semibold mb-1">Enterprise Operations</h4>
-                  <p className="text-sm text-[#94a3b8]">ITIL, Monitoring & Deployment</p>
+                  <h4 className="text-white font-semibold mb-1">Enterprise Ready</h4>
+                  <p className="text-sm text-[#94a3b8]">ITIL • Monitoring • BFSI Domain</p>
                 </div>
-              </div>
-
-              {/* Skills */}
-              <div className="flex flex-wrap gap-3 pt-4">
-                {skills.map((skill) => (
-                  <motion.span
-                    key={skill}
-                    className="px-4 py-2 rounded-full glass text-sm font-medium text-[#94a3b8] hover:text-white hover:border-[#6366f1]/50 transition-all cursor-default"
-                    whileHover={{ scale: 1.05, y: -2 }}
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
               </div>
             </motion.div>
           </div>

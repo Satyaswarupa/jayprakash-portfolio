@@ -51,7 +51,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: Phone, label: 'Phone', value: '+91 8197225902', href: 'tel:+918197225902' },
     { icon: Mail, label: 'Email', value: 'mrmohanty2331@gmail.com', href: 'mailto:mrmohanty2331@gmail.com' },
-    { icon: MapPin, label: 'Location', value: 'Cuttack, Odisha, India', href: '#' },
+    { icon: MapPin, label: 'Location', value: 'Banglore ,India', href: '#' },
   ]
 
   const socialLinks = [
