@@ -51,7 +51,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: Phone, label: 'Phone', value: '+91 8197225902', href: 'tel:+918197225902' },
     { icon: Mail, label: 'Email', value: 'mrmohanty2331@gmail.com', href: 'mailto:mrmohanty2331@gmail.com' },
-    { icon: MapPin, label: 'Location', value: 'Bangaluru, India', href: '#' },
+    { icon: MapPin, label: 'Location', value: 'Cuttack, Odisha, India', href: '#' },
   ]
 
   const socialLinks = [
@@ -69,6 +69,11 @@ const Contact = () => {
       name: 'GitHub', 
       href: 'https://github.com/Mrmohanty-Tavant',
       icon: '🐙' 
+    },
+    { 
+      name: 'LinkedIn', 
+      href: 'https://www.linkedin.com/in/jayprakash-mohanty-11a6a2204',
+      icon: '💼' 
     },
   ]
 
@@ -130,10 +135,10 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Social Links - Smaller Icons */}
+              {/* Social Links */}
               <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
                 <h3 className="font-bold text-lg mb-5 text-white">Connect with me</h3>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {socialLinks.map((social, index) => (
                     <motion.a
                       key={index}
