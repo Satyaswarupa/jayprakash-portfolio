@@ -11,7 +11,6 @@ import {
   MessageCircle,
   CheckCircle,
   Loader2,
-  ExternalLink
 } from 'lucide-react'
 
 const Contact = () => {
@@ -44,15 +43,33 @@ const Contact = () => {
   }
 
   const openWhatsApp = () => {
-    const phoneNumber = '9776995902'
+    const phoneNumber = '8197225902'
     const message = 'Hi! I visited your portfolio and would like to connect with you.'
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank')
   }
 
   const contactInfo = [
-    { icon: Phone, label: 'Phone', value: '+91 97769 95902', href: 'tel:+919776995902' },
-    { icon: Mail, label: 'Email', value: 'your.email@example.com', href: 'mailto:your.email@example.com' },
-    { icon: MapPin, label: 'Location', value: 'Cuttack, Odisha, India', href: '#' },
+    { icon: Phone, label: 'Phone', value: '+91 8197225902', href: 'tel:+918197225902' },
+    { icon: Mail, label: 'Email', value: 'mrmohanty2331@gmail.com', href: 'mailto:mrmohanty2331@gmail.com' },
+    { icon: MapPin, label: 'Location', value: 'Bangaluru, India', href: '#' },
+  ]
+
+  const socialLinks = [
+    { 
+      name: 'X', 
+      href: 'https://x.com/Mrmohanty27',
+      icon: '𝕏' 
+    },
+    { 
+      name: 'Instagram', 
+      href: 'https://www.instagram.com/engr_mohanty_27?igsh=dzc2eXgzcjhpd21r',
+      icon: '📷' 
+    },
+    { 
+      name: 'GitHub', 
+      href: 'https://github.com/Mrmohanty-Tavant',
+      icon: '🐙' 
+    },
   ]
 
   const containerVariants = {
@@ -90,7 +107,7 @@ const Contact = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-5 gap-12">
-            {/* Contact Info - unchanged */}
+            {/* Contact Info + Social Links */}
             <motion.div variants={itemVariants} className="lg:col-span-2 space-y-8">
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
@@ -113,6 +130,31 @@ const Contact = () => {
                 ))}
               </div>
 
+              {/* Social Links - Smaller Icons */}
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                <h3 className="font-bold text-lg mb-5 text-white">Connect with me</h3>
+                <div className="grid grid-cols-3 gap-4">
+                  {socialLinks.map((social, index) => (
+                    <motion.a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#6366f1]/40 transition-all group"
+                      whileHover={{ y: -3 }}
+                    >
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#6366f1]/20 to-[#ec4899]/20 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                        {social.icon}
+                      </div>
+                      <span className="text-sm font-medium text-[#94a3b8] group-hover:text-white transition-colors">
+                        {social.name}
+                      </span>
+                    </motion.a>
+                  ))}
+                </div>
+              </div>
+
+              {/* WhatsApp */}
               <motion.div
                 className="p-6 rounded-2xl bg-gradient-to-br from-[#25D366]/10 to-[#128C7E]/10 border border-[#25D366]/20"
                 whileHover={{ scale: 1.02 }}
@@ -138,7 +180,7 @@ const Contact = () => {
               </motion.div>
             </motion.div>
 
-            {/* ==================== COMPACT FORM ==================== */}
+            {/* Contact Form */}
             <motion.div variants={itemVariants} className="lg:col-span-3">
               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl">
                 <h3 className="text-2xl font-bold mb-6 text-white">Send a Message</h3>

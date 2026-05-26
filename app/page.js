@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import CursorTrail from './components/CursorTrail'
 import ScrollProgress from './components/ScrollProgress'
 import Experience from './components/Experience'
+import Education from './components/Education'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Education />
       <Skills />
       <Experience />
       {/* <Services /> */}

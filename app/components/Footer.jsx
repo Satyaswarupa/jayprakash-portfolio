@@ -9,7 +9,7 @@ const Footer = () => {
   }
 
   const openWhatsApp = () => {
-    const phoneNumber = '9776995902'
+    const phoneNumber = '8197225902' // ←←← Change this to your actual phone number (with country code, but without +)
     const message = 'Hi! I visited your portfolio and would like to connect with you.'
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
@@ -68,9 +68,9 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4 font-['Space_Grotesk']">Contact</h4>
             <ul className="space-y-3 text-sm text-[#94a3b8]">
-              <li>+91 97769 95902</li>
-              <li>your.email@example.com</li>
-              <li>Your City, Country</li>
+              <li>+91 8197225902</li>
+              <li>mrmohanty2331@gmail.com</li>
+              <li>Bangaluru, India</li>
             </ul>
           </div>
         </div>
@@ -78,7 +78,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[#94a3b8] text-sm flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-[#ec4899] fill-[#ec4899]" /> by Your Name
+            Made with <Heart className="w-4 h-4 text-[#ec4899] fill-[#ec4899]" /> Jayprakash...
           </p>
 
           <div className="flex items-center gap-4">

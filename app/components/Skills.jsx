@@ -46,41 +46,65 @@ const Skills = () => {
       icon: Activity,
       skills: [
         { name: 'Nagios', level: 85 },
-        { name: 'Grafana', level: 82 },
-        { name: 'Prometheus', level: 80 },
+        { name: 'Grafana', level: 85 },
+        { name: 'Prometheus', level: 88 },
         { name: 'Splunk', level: 84 },
+        { name: 'ELK Stack', level: 82 },
+        { name: 'Kibana', level: 80 },
       ],
     },
     {
       title: 'DevOps & Operations',
       icon: GitBranch,
       skills: [
-        { name: 'CI/CD', level: 86 },
+        { name: 'Docker', level: 85 },
+        { name: 'Kubernetes', level: 82 },
+        { name: 'Jenkins', level: 88 },
+        { name: 'GitHub Actions', level: 84 },
+        { name: 'Git', level: 92 },
+        { name: 'Maven', level: 86 },
+        { name: 'Terraform', level: 78 },
+        { name: 'Ansible', level: 80 },
+        { name: 'Shell Scripting', level: 87 },
+        { name: 'Python (Automation)', level: 75 },
+        { name: 'SonarQube', level: 80 },
+        { name: 'Trivy', level: 78 },
+        { name: 'CI/CD', level: 89 },
         { name: 'Control-M', level: 88 },
-        { name: 'JIRA', level: 92 },
-        { name: 'ServiceNow', level: 90 },
       ],
     },
   ]
 
   const tools = [
-    'SQL',
     'Java 8',
+    'Spring Boot',
+    'SQL',
     'Oracle 14c',
-    'Windows',
+    'AWS',
+    'Docker',
+    'Kubernetes',
+    'Jenkins',
+    'GitHub Actions',
+    'Git',
+    'Maven',
+    'Terraform',
+    'Ansible',
     'Linux',
+    'Shell Scripting',
+    'Python',
     'JIRA',
     'ServiceNow',
     'Control-M',
     'Nagios',
-    'Splunk',
-    'Putty',
-    'VMware',
-    'CI/CD',
-    'AWS',
-    'Spring Boot',
-    'Grafana',
     'Prometheus',
+    'Grafana',
+    'ELK Stack',
+    'Kibana',
+    'Splunk',
+    'SonarQube',
+    'Trivy',
+    'VMware',
+    'Putty',
     'ITIL Framework',
   ]
 
@@ -173,8 +197,7 @@ const Skills = () => {
                           }
                           transition={{
                             duration: 1.2,
-                            delay:
-                              catIndex * 0.3 + skillIndex * 0.1,
+                            delay: catIndex * 0.3 + skillIndex * 0.1,
                             ease: 'easeOut',
                           }}
                         />
@@ -201,11 +224,7 @@ const Skills = () => {
                   key={tech}
                   className="px-5 py-2.5 rounded-xl glass text-sm font-medium text-[#94a3b8] hover:text-white hover:border-[#6366f1]/50 transition-all cursor-default"
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={
-                    inView
-                      ? { opacity: 1, scale: 1 }
-                      : {}
-                  }
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: index * 0.05 }}
                   whileHover={{ scale: 1.1, y: -3 }}
                 >
@@ -220,10 +239,7 @@ const Skills = () => {
             variants={containerVariants}
             className="grid md:grid-cols-4 gap-6 mt-16"
           >
-            <motion.div
-              variants={itemVariants}
-              className="card text-center"
-            >
+            <motion.div variants={itemVariants} className="card text-center">
               <Terminal className="w-10 h-10 text-[#6366f1] mx-auto mb-4" />
               <h4 className="font-bold mb-2">System Support</h4>
               <p className="text-sm text-[#94a3b8]">
@@ -231,21 +247,15 @@ const Skills = () => {
               </p>
             </motion.div>
 
-            <motion.div
-              variants={itemVariants}
-              className="card text-center"
-            >
+            <motion.div variants={itemVariants} className="card text-center">
               <MonitorCog className="w-10 h-10 text-[#6366f1] mx-auto mb-4" />
               <h4 className="font-bold mb-2">Monitoring</h4>
               <p className="text-sm text-[#94a3b8]">
-                Real-time monitoring using Nagios & Grafana
+                Real-time monitoring using Prometheus, Grafana & ELK
               </p>
             </motion.div>
 
-            <motion.div
-              variants={itemVariants}
-              className="card text-center"
-            >
+            <motion.div variants={itemVariants} className="card text-center">
               <Server className="w-10 h-10 text-[#6366f1] mx-auto mb-4" />
               <h4 className="font-bold mb-2">Enterprise Systems</h4>
               <p className="text-sm text-[#94a3b8]">
@@ -253,10 +263,7 @@ const Skills = () => {
               </p>
             </motion.div>
 
-            <motion.div
-              variants={itemVariants}
-              className="card text-center"
-            >
+            <motion.div variants={itemVariants} className="card text-center">
               <ShieldCheck className="w-10 h-10 text-[#6366f1] mx-auto mb-4" />
               <h4 className="font-bold mb-2">ITIL Operations</h4>
               <p className="text-sm text-[#94a3b8]">
