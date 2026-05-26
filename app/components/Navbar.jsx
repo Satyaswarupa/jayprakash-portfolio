@@ -18,7 +18,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    {name: 'Education', href: '#education' },
+    { name: 'Education', href: '#education' },
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Contact', href: '#contact' },
@@ -71,33 +71,42 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white p-2"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Improved Visibility */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass mx-6 mt-4 rounded-2xl overflow-hidden"
+            className="md:hidden mx-4 mt-4 rounded-2xl overflow-hidden"
           >
-            <div className="flex flex-col p-6 gap-4">
+            <div className="bg-[#0f0f1a] border border-white/10 backdrop-blur-xl py-6 px-6 flex flex-col gap-4 shadow-2xl">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-[#94a3b8] hover:text-white transition-colors py-2"
+                  className="text-[#e2e8f0] hover:text-white text-lg py-3 px-4 rounded-xl hover:bg-white/5 transition-all active:bg-white/10"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
+              
+              <motion.a
+                href="#contact"
+                className="btn-primary text-center mt-4 py-3.5"
+                onClick={() => setIsOpen(false)}
+                whileTap={{ scale: 0.98 }}
+              >
+                Let's Talk
+              </motion.a>
             </div>
           </motion.div>
         )}
